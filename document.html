@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kutu {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        #kutu_mavi {
+            background-color: blue;
+        }
+
+        #kutu_kirmizi {
+            background-color: red;
+        }
+
+        #kutu_sari {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="myButton1" onclick="alert('button1')">
+        Button 1
+    </button>
+    <button id="myButton2">
+        Button 2
+    </button>
+    <button id="myButton3" onclick="button3Click();">
+        Button 3
+    </button>
+
+    <p style="font-size:3vw;color:Tomato;" id="paragraf">
+
+        Sıfırdan web devoloper eğitimi;
+    </p>
+    <button id="btnParagraf"> paragrafı değiştir
+    </button>
+    <button id="myButton4">
+        Paragrafı Sil
+    </button><br><br>
+    <button id="myButton5">
+        Paragrafı Getir
+    </button>
+
+
+
+    <br>
+    <img id="resim" src="img1.jpg" width="200"> <br>
+    <button id="imgDegistir"> Resmi Değiştir
+    </button><br>
+
+    <div id="kutu_mavi" class="kutu"></div>
+    <div id="kutu_kirmizi" class="kutu"></div>
+    <div id="kutu_sari" class="kutu"></div>
+
+
+    <script>
+
+
+        document.getElementById('myButton2').onclick = function () {
+
+            alert("Button2")
+        }
+
+        function button3Click() {
+            alert('Button3')
+        }
+
+        document.getElementById('btnParagraf').onclick = function () {
+
+            document.getElementById('paragraf').innerHTML = "<b >Sıfırdan Komple Web Geliştirici Olun!</b>";
+            document.getElementById('paragraf').style.color = "blue";
+            document.getElementById('paragraf').style.fontSize = "30px";
+
+        };
+        document.getElementById('myButton4').onclick = function () {
+            document.getElementById('paragraf').style.display = "none";
+        };
+        document.getElementById('myButton5').onclick = function () {
+            document.getElementById('paragraf').style.display = "block";
+        };
+
+
+
+
+
+        document.getElementById('imgDegistir').onclick = function () {
+            document.getElementById('resim').src = "im3pr.jpg";
+        };
+
+        document.getElementById('kutu_mavi').onclick=function(){
+            document.getElementById('kutu_mavi').style.display="none" ;   
+        };
+
+        document.getElementById('kutu_kirmizi').onclick=function(){
+            document.getElementById('kutu_kirmizi').style.display="none" ;   
+        };
+
+        document.getElementById('kutu_sari').onclick=function(){
+            document.getElementById('kutu_sari').style.display="none" ;   
+        };
+
+
+    </script>
+
+   
+</body>
+
+</html>
